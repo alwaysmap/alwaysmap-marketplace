@@ -1,18 +1,23 @@
 {
   "name": "alwaysmap",
-  "displayName": "alwaysmap",
-  "description": "Practical AI plugins for job searching and learning. Built by Dylan Thomas.",
+  "owner": {
+    "name": "Dylan Thomas",
+    "email": "dylan@alwaysmap.com"
+  },
+  "metadata": {
+    "description": "Practical AI plugins for job searching and learning. Built by Dylan Thomas.",
+    "version": "1.0.0"
+  },
   "plugins": [
     {
       "name": "jfm",
-      "displayName": "Jobs for Me",
-      "version": "0.8.0",
       "source": {
         "source": "github",
         "repo": "alwaysmap/jobs4me",
         "ref": "v0.8.0"
       },
       "description": "An AI-powered job search agent that learns what roles you'd actually take, finds them, assesses fit, and prepares you for interviews.",
+      "version": "0.8.0",
       "author": {
         "name": "Dylan Thomas"
       },
@@ -28,14 +33,13 @@
     },
     {
       "name": "tmb",
-      "displayName": "Train My Brain",
-      "version": "0.2.0",
       "source": {
         "source": "github",
         "repo": "alwaysmap/train-my-brain",
         "ref": "v0.2.0"
       },
       "description": "A learning curriculum builder that interviews you about your goal, designs a structured hands-on curriculum, and builds a folder with exercises, validation, and an optional Hugo site.",
+      "version": "0.2.0",
       "author": {
         "name": "Dylan Thomas"
       },
