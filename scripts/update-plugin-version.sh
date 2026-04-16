@@ -21,7 +21,7 @@ fi
 # Strip leading 'v' if present
 VERSION="${VERSION#v}"
 
-MARKETPLACE="$(dirname "$0")/../marketplace.json"
+MARKETPLACE="$(dirname "$0")/../.claude-plugin/marketplace.json"
 
 if [[ ! -f "$MARKETPLACE" ]]; then
   echo "Error: marketplace.json not found at $MARKETPLACE" >&2
@@ -52,6 +52,6 @@ echo "Updated $PLUGIN: $CURRENT → $VERSION"
 # Commit and push
 git config user.name "github-actions[bot]"
 git config user.email "github-actions[bot]@users.noreply.github.com"
-git add marketplace.json
+git add .claude-plugin/marketplace.json
 git commit -m "Bump $PLUGIN to $VERSION"
 git push
