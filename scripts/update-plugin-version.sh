@@ -42,12 +42,14 @@ if [[ "$CURRENT" == "$VERSION" ]]; then
   exit 0
 fi
 
-# Update the version in place
-jq --arg p "$PLUGIN" --arg v "$VERSION" \
-  '(.plugins[] | select(.name == $p) | .version) = $v' \
+# Update the version and source.ref in place
+REF="v$VERSION"
+jq --arg p "$PLUGIN" --arg v "$VERSION" --arg r "$REF" \
+  '(.plugins[] | select(.name == $p) | .version) = $v
+   | (.plugins[] | select(.name == $p) | .source.ref) = $r' \
   "$MARKETPLACE" > "$MARKETPLACE.tmp" && mv "$MARKETPLACE.tmp" "$MARKETPLACE"
 
-echo "Updated $PLUGIN: $CURRENT → $VERSION"
+echo "Updated $PLUGIN: $CURRENT → $VERSION (ref $REF)"
 
 # Commit and push
 git config user.name "github-actions[bot]"

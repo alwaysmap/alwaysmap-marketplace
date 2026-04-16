@@ -7,7 +7,11 @@
       "name": "jfm",
       "displayName": "Jobs for Me",
       "version": "0.8.0",
-      "source": "https://github.com/alwaysmap/jobs4me/releases/latest/download/jobs-for-me.zip",
+      "source": {
+        "source": "github",
+        "repo": "alwaysmap/jobs4me",
+        "ref": "v0.8.0"
+      },
       "description": "An AI-powered job search agent that learns what roles you'd actually take, finds them, assesses fit, and prepares you for interviews.",
       "author": {
         "name": "Dylan Thomas"
@@ -26,7 +30,11 @@
       "name": "tmb",
       "displayName": "Train My Brain",
       "version": "0.2.0",
-      "source": "https://github.com/alwaysmap/train-my-brain/releases/latest/download/train-my-brain.zip",
+      "source": {
+        "source": "github",
+        "repo": "alwaysmap/train-my-brain",
+        "ref": "v0.2.0"
+      },
       "description": "A learning curriculum builder that interviews you about your goal, designs a structured hands-on curriculum, and builds a folder with exercises, validation, and an optional Hugo site.",
       "author": {
         "name": "Dylan Thomas"
